@@ -10,6 +10,7 @@
       border: 2px solid #2563eb;
       box-shadow: 0 0 12px rgba(37,99,235,0.6);
     }
+    .hidden { display: none; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -86,11 +87,24 @@
   <section id="contact" class="py-20 px-6 bg-gray-100">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
-      <form id="bookingForm" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
+
+      <!-- Thank You Message (hidden by default) -->
+      <div id="thankYouMessage" class="hidden text-center bg-white shadow-lg rounded-2xl p-10">
+        <h3 class="text-2xl font-bold text-green-600">🎉 Thank You!</h3>
+        <p class="mt-4 text-lg">Your booking request has been sent successfully.<br>We’ll be in touch soon.</p>
+        <a href="#" onclick="location.reload()" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Back to Home</a>
+      </div>
+
+      <!-- Form -->
+      <form id="bookingForm" action="https://formsubmit.co/stephsdronerevampingservices@gmail.com" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
         
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Booking - Steph’s Drone & Revamping Services">
+        <input type="hidden" name="_next" value="">
+
         <!-- Hidden package input -->
         <input type="hidden" name="package" id="selectedPackage" value="Premium — $80,000">
-        <input type="hidden" name="_captcha" value="false">
 
         <div>
           <label class="block font-medium">Name</label>
@@ -119,13 +133,6 @@
 
         <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">Send Booking</button>
       </form>
-
-      <!-- Thank You Message -->
-      <div id="thankYou" class="hidden text-center bg-white shadow-lg rounded-2xl p-12">
-        <h3 class="text-2xl font-bold text-green-600">✅ Thank You!</h3>
-        <p class="mt-4">Your booking request has been sent successfully. We’ll get back to you soon!</p>
-        <a href="#pricing" class="mt-6 inline-block px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">Back to Packages</a>
-      </div>
     </div>
   </section>
 
@@ -138,21 +145,17 @@
       const messageBox = document.querySelector('#message');
       const bookButtons = document.querySelectorAll('.book-btn');
       const form = document.querySelector('#bookingForm');
-      const thankYou = document.querySelector('#thankYou');
+      const thankYou = document.querySelector('#thankYouMessage');
 
       function selectPackage(selected) {
-        // highlight
         packageCards.forEach(c => {
           c.classList.remove('active');
           if (c.dataset.package === selected) c.classList.add('active');
         });
 
-        // set values
         packageInput.value = selected;
         interestDropdown.value = selected;
         messageBox.value = `I’m interested in the ${selected} package.`;
-
-        // scroll to form
         document.querySelector('#contact').scrollIntoView({behavior: "smooth"});
       }
 
@@ -164,16 +167,19 @@
         btn.addEventListener('click', () => selectPackage(btn.dataset.package));
       });
 
-      // Show thank you message after submission
+      // Handle form submission with inline thank-you
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         const data = new FormData(form);
-        fetch(form.action, { method: 'POST', body: data })
-          .then(() => {
-            form.classList.add('hidden');
-            thankYou.classList.remove('hidden');
-          })
-          .catch(err => alert("Something went wrong. Please try again."));
+        fetch(form.action, {
+          method: 'POST',
+          body: data
+        }).then(() => {
+          form.classList.add('hidden');
+          thankYou.classList.remove('hidden');
+        }).catch(() => {
+          alert("Something went wrong. Please try again.");
+        });
       });
     });
   </script>
