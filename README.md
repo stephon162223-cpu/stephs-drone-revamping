@@ -248,8 +248,6 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
 <!-- ==========================
   FILE: thank-you.html
   Simple confirmation page shown after successful form submission
