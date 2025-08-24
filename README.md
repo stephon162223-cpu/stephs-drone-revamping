@@ -23,6 +23,28 @@
     <a href="#pricing" class="mt-8 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-lg font-medium">View Packages</a>
   </section>
 
+  <!-- About -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialize in drone photography and videography, capturing breathtaking aerial shots that highlight the unique features of every property. From real estate listings and Airbnb rentals to private estates and commercial spaces, we also create polished interior and exterior photography to showcase your space from every angle. Beyond imagery, our property revamping service adds modern styling and creative staging to elevate appeal and performance. Whether you’re marketing a home for sale, boosting Airbnb bookings, or promoting an event, our team brings your vision to life with professionalism, creativity, and excellence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Jamaican house aerial">
+        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Luxury villa Jamaica">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Landscape Jamaica">
+      </div>
+    </div>
+  </section>
+
   <!-- Packages -->
   <section id="pricing" class="py-20 px-6 bg-gray-50">
     <div class="max-w-7xl mx-auto">
@@ -156,30 +178,22 @@
 
     packageCards.forEach(card => {
       card.addEventListener("click", () => {
-        // remove highlight
         packageCards.forEach(c => c.classList.remove("active-package"));
         card.classList.add("active-package");
-
-        // set values
         const selected = card.dataset.package;
         packageInput.value = selected;
         interestDropdown.value = selected;
       });
     });
 
-    // Book button click = auto-select package
     document.querySelectorAll(".book-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const selected = btn.dataset.package;
         packageInput.value = selected;
         interestDropdown.value = selected;
-
-        // highlight correct card
         packageCards.forEach(c => {
           c.classList.toggle("active-package", c.dataset.package === selected);
         });
-
-        // scroll to contact form
         document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
       });
     });
