@@ -220,7 +220,7 @@
             <textarea name="message" required class="w-full rounded-xl border p-3 h-28 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tell us about your property or event…"></textarea>
           </div>
 
-          <button type="submit" class="mt-6 w-full bg-blue-600 text-white font-semibold rounded-xl py-3 hover:bg-blue-700">Send Message</button>
+          <button type="submit" class="mt-6 w-full bg-blue-600 text-white font-semibold rounded-xl py-3 hover:bg-blue-700">Book Here</button>
           <p class="text-xs text-gray-500 mt-3">By submitting, you agree to be contacted about your inquiry.</p>
         </form>
 
