@@ -10,15 +10,18 @@
       border: 2px solid #2563eb;
       box-shadow: 0 0 12px rgba(37,99,235,0.6);
     }
+    header {
+      transition: top 0.3s;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Header -->
-  <header class="py-6 bg-white shadow fixed w-full top-0 z-50">
+  <header id="siteHeader" class="py-6 bg-white shadow fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
       <h1 class="text-2xl font-bold">Steph’s Drone & Revamping</h1>
-      <nav class="space-x-6">
+      <nav class="space-x-6 hidden md:block">
         <a href="#about" class="hover:text-blue-600">About</a>
         <a href="#services" class="hover:text-blue-600">Services</a>
         <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
@@ -86,7 +89,7 @@
   <section id="pricing" class="py-20 px-6 bg-gray-50">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-4 gap-6">
 
         <!-- Basic -->
         <div class="package-card rounded-2xl border shadow p-8 cursor-pointer" data-package="Basic — $50,000">
@@ -131,6 +134,20 @@
           <button type="button" class="book-btn mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black" data-package="Platinum — $100,000">Book Platinum</button>
         </div>
 
+        <!-- Events -->
+        <div class="package-card rounded-2xl border shadow p-8 cursor-pointer" data-package="Event Package — $120,000">
+          <h3 class="text-2xl font-bold">Event Package</h3>
+          <p class="mt-2 text-gray-600">Perfect for weddings, parties & special events.</p>
+          <p class="mt-6 text-4xl font-extrabold">$120,000</p>
+          <ul class="mt-6 space-y-2 text-gray-700">
+            <li>• Full drone coverage of event</li>
+            <li>• Professional ground photography</li>
+            <li>• Highlight video included</li>
+            <li>• 7–10 day delivery</li>
+          </ul>
+          <button type="button" class="book-btn mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black" data-package="Event Package — $120,000">Book Event Package</button>
+        </div>
+
       </div>
     </div>
   </section>
@@ -162,6 +179,8 @@
             <option value="Basic — $50,000">Basic — $50,000</option>
             <option value="Premium — $80,000" selected>Premium — $80,000</option>
             <option value="Platinum — $100,000">Platinum — $100,000</option>
+            <option value="Event Package — $120,000">Event Package — $120,000</option>
+            <option value="Custom Quote">Custom Quote (Not Listed)</option>
           </select>
         </div>
 
@@ -192,32 +211,26 @@
       const bookButtons = document.querySelectorAll('.book-btn');
       const form = document.querySelector('#bookingForm');
       const thankYou = document.querySelector('#thankYou');
+      const header = document.querySelector('#siteHeader');
 
       function selectPackage(selected) {
-        // highlight
         packageCards.forEach(c => {
           c.classList.remove('active');
           if (c.dataset.package === selected) c.classList.add('active');
         });
-
-        // set values
         packageInput.value = selected;
         interestDropdown.value = selected;
         messageBox.value = `I’m interested in the ${selected} package.`;
-
-        // scroll to form
         document.querySelector('#contact').scrollIntoView({behavior: "smooth"});
       }
 
       packageCards.forEach(card => {
         card.addEventListener('click', () => selectPackage(card.dataset.package));
       });
-
       bookButtons.forEach(btn => {
         btn.addEventListener('click', () => selectPackage(btn.dataset.package));
       });
 
-      // Show thank you message after submission
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         const data = new FormData(form);
@@ -226,7 +239,19 @@
             form.classList.add('hidden');
             thankYou.classList.remove('hidden');
           })
-          .catch(err => alert("Something went wrong. Please try again."));
+          .catch(() => alert("Something went wrong. Please try again."));
+      });
+
+      // Hide header on scroll down, show on scroll up
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll && currentScroll > 80) {
+          header.style.top = "-100px";
+        } else {
+          header.style.top = "0";
+        }
+        lastScroll = currentScroll;
       });
     });
   </script>
