@@ -127,7 +127,7 @@
         <div class="rounded-2xl border shadow p-8 reveal">
           <h3 class="text-2xl font-bold">Basic</h3>
           <p class="mt-2 text-gray-600">Perfect for quick listings and small spaces.</p>
-          <p class="mt-6 text-4xl font-extrabold">PRICE_HERE</p>
+          <p class="mt-6 text-4xl font-extrabold">$50,000</p>
           <ul class="mt-6 space-y-2 text-gray-700">
             <li>• 10–15 edited photos (int./ext.)</li>
             <li>• 3–5 aerial photos</li>
@@ -141,7 +141,7 @@
           <div class="inline-block px-3 py-1 text-xs bg-blue-600 text-white rounded-full">Most Popular</div>
           <h3 class="text-2xl font-bold mt-3">Premium</h3>
           <p class="mt-2 text-gray-600">Ideal for standout listings & Airbnb.</p>
-          <p class="mt-6 text-4xl font-extrabold">PRICE_HERE</p>
+          <p class="mt-6 text-4xl font-extrabold">$80,000</p>
           <ul class="mt-6 space-y-2 text-gray-700">
             <li>• 20–30 edited photos (int./ext.)</li>
             <li>• 8–12 aerial photos</li>
@@ -154,7 +154,7 @@
         <div class="rounded-2xl border shadow p-8 reveal">
           <h3 class="text-2xl font-bold">Platinum</h3>
           <p class="mt-2 text-gray-600">For luxury listings, events, and campaigns.</p>
-          <p class="mt-6 text-4xl font-extrabold">PRICE_HERE</p>
+          <p class="mt-6 text-4xl font-extrabold">$100,000</p>
           <ul class="mt-6 space-y-2 text-gray-700">
             <li>• 35–50 edited photos (int./ext.)</li>
             <li>• 15–25 aerial photos</li>
