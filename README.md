@@ -48,22 +48,6 @@
       0%,100% { transform: scale(1); opacity: 0.2; }
       50% { transform: scale(1.2); opacity: 0.3; }
     }
-
-    /* Floating drones */
-    .drone {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      opacity: 0.3;
-      background: url('https://cdn-icons-png.flaticon.com/512/688/688115.png') no-repeat center center;
-      background-size: contain;
-      animation: floatDrone linear infinite;
-    }
-    @keyframes floatDrone {
-      0% { transform: translate(0,0) rotate(0deg); }
-      50% { transform: translate(30px, -40px) rotate(20deg); }
-      100% { transform: translate(0,0) rotate(0deg); }
-    }
   </style>
 </head>
 <body class="font-sans text-gray-900">
@@ -97,10 +81,6 @@
       <div class="absolute w-96 h-96 bg-indigo-500 opacity-20 rounded-full top-10 left-10 animate-pulse-slow"></div>
       <div class="absolute w-72 h-72 bg-purple-500 opacity-15 rounded-full bottom-0 right-16 animate-pulse-slow"></div>
     </div>
-    <div class="drone top-20 left-10 animate-[floatDrone_12s_infinite]"></div>
-    <div class="drone top-32 right-16 animate-[floatDrone_15s_infinite]"></div>
-    <div class="drone top-40 left-1/2 animate-[floatDrone_18s_infinite]"></div>
-    <div class="drone bottom-24 right-32 animate-[floatDrone_20s_infinite]"></div>
   </section>
 
   <!-- About -->
@@ -118,9 +98,9 @@
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://images.unsplash.com/photo-1580584124513-cb417a5b0a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Drone aerial Jamaica">
         <img src="https://images.unsplash.com/photo-1560185127-6fcb9f5bdebe?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Luxury villa Jamaica">
-        <img src="https://images.unsplash.com/photo-1581091012184-8727e3267d8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
+        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Drone aerial property Jamaica">
+        <img src="https://images.unsplash.com/photo-1580584124513-cb417a5b0a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
       </div>
     </div>
   </section>
@@ -242,7 +222,6 @@
     </div>
   </section>
 
-  <!-- Script -->
   <script>
     const packageCards = document.querySelectorAll(".package-card");
     const packageInput = document.querySelector("#selectedPackage");
@@ -270,6 +249,5 @@
       });
     });
   </script>
-
 </body>
 </html>
