@@ -1,4 +1,4 @@
-# stephs-drone-revamping <!-- ==========================
+# stephs-drone-revamping 
   FILE: index.html
   Steph’s Drone & Revamping Services — Single-page website
   Notes:
