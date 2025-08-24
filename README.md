@@ -10,28 +10,80 @@
       border: 2px solid #2563eb;
       box-shadow: 0 0 12px rgba(37,99,235,0.6);
     }
-    .hidden { display: none; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Header -->
-  <header class="py-6 bg-white shadow">
+  <header class="py-6 bg-white shadow fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
-      <h1 class="text-2xl font-bold">Steph’s Drone & Revamping Services</h1>
-      <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Book Now</a>
+      <h1 class="text-2xl font-bold">Steph’s Drone & Revamping</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+        <a href="#pricing" class="hover:text-blue-600">Packages</a>
+        <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Book Now</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="py-20 px-6 text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+  <section class="pt-32 pb-20 px-6 text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
     <h2 class="text-4xl md:text-5xl font-bold">Bring Your Property to Life</h2>
-    <p class="mt-4 text-lg">Professional drone shots, real estate media, and revamping services.</p>
+    <p class="mt-4 text-lg">Professional drone photography, real estate media, and revamping services across Jamaica.</p>
     <a href="#pricing" class="mt-8 inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100">View Packages</a>
   </section>
 
+  <!-- About -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialize in drone photography and videography, capturing breathtaking aerial shots that highlight the unique features of every property. From real estate listings and Airbnb rentals to private estates and commercial spaces, we also create polished interior and exterior photography to showcase your space from every angle. Beyond imagery, our property revamping service adds modern styling and creative staging to elevate appeal and performance. Whether you’re marketing a home for sale, boosting Airbnb bookings, or promoting an event, our team brings your vision to life with professionalism, creativity, and excellence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-6 bg-gray-100">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Services</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 shadow rounded-xl">
+          <h3 class="text-xl font-semibold mb-2">Drone Photography</h3>
+          <p class="text-gray-600">Stunning aerial views of homes, land, and events.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-xl">
+          <h3 class="text-xl font-semibold mb-2">Real Estate Media</h3>
+          <p class="text-gray-600">Interior & exterior photography and highlight videos.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-xl">
+          <h3 class="text-xl font-semibold mb-2">Airbnb Promotion</h3>
+          <p class="text-gray-600">Photos and videos that attract more bookings.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-xl">
+          <h3 class="text-xl font-semibold mb-2">Property Revamping</h3>
+          <p class="text-gray-600">Creative staging and styling for maximum appeal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Jamaican house aerial">
+        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Luxury villa Jamaica">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Landscape Jamaica">
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing -->
-  <section id="pricing" class="py-20 px-6 bg-white">
+  <section id="pricing" class="py-20 px-6 bg-gray-50">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -87,24 +139,11 @@
   <section id="contact" class="py-20 px-6 bg-gray-100">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
-
-      <!-- Thank You Message (hidden by default) -->
-      <div id="thankYouMessage" class="hidden text-center bg-white shadow-lg rounded-2xl p-10">
-        <h3 class="text-2xl font-bold text-green-600">🎉 Thank You!</h3>
-        <p class="mt-4 text-lg">Your booking request has been sent successfully.<br>We’ll be in touch soon.</p>
-        <a href="#" onclick="location.reload()" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Back to Home</a>
-      </div>
-
-      <!-- Form -->
       <form id="bookingForm" action="https://formsubmit.co/stephsdronerevampingservices@gmail.com" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
         
-        <!-- FormSubmit settings -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Booking - Steph’s Drone & Revamping Services">
-        <input type="hidden" name="_next" value="">
-
         <!-- Hidden package input -->
         <input type="hidden" name="package" id="selectedPackage" value="Premium — $80,000">
+        <input type="hidden" name="_captcha" value="false">
 
         <div>
           <label class="block font-medium">Name</label>
@@ -133,6 +172,13 @@
 
         <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">Send Booking</button>
       </form>
+
+      <!-- Thank You Message -->
+      <div id="thankYou" class="hidden text-center bg-white shadow-lg rounded-2xl p-12">
+        <h3 class="text-2xl font-bold text-green-600">✅ Thank You!</h3>
+        <p class="mt-4">Your booking request has been sent successfully. We’ll get back to you soon!</p>
+        <a href="#pricing" class="mt-6 inline-block px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">Back to Packages</a>
+      </div>
     </div>
   </section>
 
@@ -145,17 +191,21 @@
       const messageBox = document.querySelector('#message');
       const bookButtons = document.querySelectorAll('.book-btn');
       const form = document.querySelector('#bookingForm');
-      const thankYou = document.querySelector('#thankYouMessage');
+      const thankYou = document.querySelector('#thankYou');
 
       function selectPackage(selected) {
+        // highlight
         packageCards.forEach(c => {
           c.classList.remove('active');
           if (c.dataset.package === selected) c.classList.add('active');
         });
 
+        // set values
         packageInput.value = selected;
         interestDropdown.value = selected;
         messageBox.value = `I’m interested in the ${selected} package.`;
+
+        // scroll to form
         document.querySelector('#contact').scrollIntoView({behavior: "smooth"});
       }
 
@@ -167,19 +217,16 @@
         btn.addEventListener('click', () => selectPackage(btn.dataset.package));
       });
 
-      // Handle form submission with inline thank-you
+      // Show thank you message after submission
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         const data = new FormData(form);
-        fetch(form.action, {
-          method: 'POST',
-          body: data
-        }).then(() => {
-          form.classList.add('hidden');
-          thankYou.classList.remove('hidden');
-        }).catch(() => {
-          alert("Something went wrong. Please try again.");
-        });
+        fetch(form.action, { method: 'POST', body: data })
+          .then(() => {
+            form.classList.add('hidden');
+            thankYou.classList.remove('hidden');
+          })
+          .catch(err => alert("Something went wrong. Please try again."));
       });
     });
   </script>
