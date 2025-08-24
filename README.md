@@ -1,130 +1,42 @@
-# stephs-drone-revamping 
-  FILE: index.html
-  Steph’s Drone & Revamping Services — Single-page website
-  Notes:
-  • Update package prices inside the Pricing section (look for PRICE_HERE).
-  • Contact form uses FormSubmit → sends directly to your Gmail and redirects to thank-you.html
-========================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steph’s Drone & Revamping Services</title>
-  <meta name="description" content="Stunning drone shots, interior/exterior photography, and property revamping for real estate, Airbnb, events, and commercial spaces." />
-  <meta property="og:title" content="Steph’s Drone & Revamping Services" />
-  <meta property="og:description" content="Aerial visuals + property revamps that make every space stand out." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ctext y='1em' font-size='96'%3E%F0%9F%9A%81%3C/text%3E%3C/svg%3E" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Soft fade-in on scroll */
-    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.show { opacity: 1; transform: translateY(0); }
-    /* Glass card */
-    .glass { background: rgba(255,255,255,.85); backdrop-filter: blur(8px); }
-  </style>
-  <script>
-    // Intersection Observer to reveal elements on scroll
-    document.addEventListener('DOMContentLoaded', () => {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-      }, { threshold: 0.15 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    });
-
-    // Contact form: sending state + redirect handled by hidden _next
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn.innerHTML;
-      btn.disabled = true; btn.innerHTML = 'Sending…';
-      const data = new FormData(form);
-      fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' }})
-        .then(r => {
-          if (r.ok) { window.location.href = form.querySelector('input[name="_next"]').value; }
-          else throw new Error('Submission failed');
-        })
-        .catch(() => { alert('Oops! Something went wrong. Please try again.'); btn.disabled = false; btn.innerHTML = original; });
+    .active {
+      border: 2px solid #2563eb;
+      box-shadow: 0 0 12px rgba(37,99,235,0.6);
     }
-  </script>
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 selection:bg-blue-600 selection:text-white">
-  <!-- Nav -->
-  <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 bg-white/80 backdrop-blur-md shadow-sm rounded-b-2xl">
-      <a href="#top" class="font-extrabold text-xl tracking-tight">Steph’s Drone <span class="text-blue-600">& Revamping</span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
-        <a href="#pricing" class="hover:text-blue-600">Packages</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#contact" class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700">Book Now</a>
-      </div>
-      <a href="#contact" class="md:hidden inline-flex items-center px-3 py-2 rounded-xl bg-blue-600 text-white">Book</a>
-    </nav>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="py-6 bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-bold">Steph’s Drone & Revamping Services</h1>
+      <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Book Now</a>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section id="top" class="relative min-h-[92vh] grid place-items-center overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1473181488821-2d23949a045a?q=80&w=2400&auto=format&fit=crop" alt="Aerial of modern villa and pool" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"></div>
-    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 text-white reveal">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Steph’s Drone & Revamping Services</h1>
-      <p class="mt-4 text-lg md:text-xl text-white/90">We capture breathtaking drone shots and deliver modern property revamps that make real estate, events, and landscapes unforgettable.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#portfolio" class="px-6 py-3 rounded-2xl bg-white/95 text-gray-900 font-semibold hover:bg-white">See Work</a>
-        <a href="#contact" class="px-6 py-3 rounded-2xl bg-blue-600 font-semibold hover:bg-blue-700">Get a Quote</a>
-      </div>
-      <div class="mt-8 text-sm text-white/80">Instagram: <a class="underline hover:text-white" target="_blank" href="https://www.instagram.com/stephsdronerevampingservices?igsh=OW5yMnFnaGkzMmx4">@stephsdronerevampingservices</a> • Email: <a class="underline hover:text-white" href="mailto:stephsdronerevampingservices@gmail.com">stephsdronerevampingservices@gmail.com</a></div>
-    </div>
+  <section class="py-20 px-6 text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <h2 class="text-4xl md:text-5xl font-bold">Bring Your Property to Life</h2>
+    <p class="mt-4 text-lg">Professional drone shots, real estate media, and revamping services.</p>
+    <a href="#pricing" class="mt-8 inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100">View Packages</a>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-20 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">What We Do</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6 shadow reveal">
-          <h3 class="text-xl font-semibold mb-2">Drone Photography & Videography</h3>
-          <p class="text-gray-600">Aerial visuals that highlight architecture, land, and ambiance for listings, events, and marketing.</p>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow reveal">
-          <h3 class="text-xl font-semibold mb-2">Interior & Exterior Photography</h3>
-          <p class="text-gray-600">Crisp, well-lit shots that show every angle — perfect for Airbnb, real estate, and commercial spaces.</p>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow reveal">
-          <h3 class="text-xl font-semibold mb-2">Property Revamping</h3>
-          <p class="text-gray-600">Staging, styling, and light makeovers to create modern, welcoming spaces that attract buyers and guests.</p>
-        </div>
-      </div>
-      <p class="max-w-4xl mx-auto mt-10 text-center text-gray-700 reveal">Steph’s Drone & Revamping Services is your go‑to for stunning visuals and property transformations. From real estate listings and Airbnb rentals to private estates and commercial spaces, our imagery makes every property stand out. We combine creativity, technology, and design to deliver results that leave a lasting impression.</p>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="py-20 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Portfolio Highlights</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop" alt="Airbnb interior living room" /></figure>
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop" alt="Coastal landscape drone shot" /></figure>
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop" alt="Modern home exterior at dusk" /></figure>
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1479705879471-65f3457ebd39?q=80&w=1600&auto=format&fit=crop" alt="Mountain landscape aerial" /></figure>
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1459535653751-d571815e906b?q=80&w=1600&auto=format&fit=crop" alt="Event venue from above" /></figure>
-        <figure class="overflow-hidden rounded-2xl shadow reveal"><img class="w-full h-72 object-cover hover:scale-105 transition" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1600&auto=format&fit=crop" alt="Styled bedroom Airbnb" /></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing / Packages -->
+  <!-- Pricing -->
   <section id="pricing" class="py-20 px-6 bg-white">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Packages</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
       <div class="grid md:grid-cols-3 gap-6">
+
         <!-- Basic -->
-        <div class="rounded-2xl border shadow p-8 reveal">
+        <div class="package-card rounded-2xl border shadow p-8 cursor-pointer" data-package="Basic — $50,000">
           <h3 class="text-2xl font-bold">Basic</h3>
           <p class="mt-2 text-gray-600">Perfect for quick listings and small spaces.</p>
           <p class="mt-6 text-4xl font-extrabold">$50,000</p>
@@ -134,10 +46,11 @@
             <li>• Basic color correction</li>
             <li>• 3–5 day delivery</li>
           </ul>
-          <a href="#contact" class="mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black">Book Basic</a>
+          <button type="button" class="book-btn mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black" data-package="Basic — $50,000">Book Basic</button>
         </div>
+
         <!-- Premium -->
-        <div class="rounded-2xl border-2 border-blue-600 shadow-lg p-8 reveal">
+        <div class="package-card rounded-2xl border shadow p-8 cursor-pointer active" data-package="Premium — $80,000">
           <div class="inline-block px-3 py-1 text-xs bg-blue-600 text-white rounded-full">Most Popular</div>
           <h3 class="text-2xl font-bold mt-3">Premium</h3>
           <p class="mt-2 text-gray-600">Ideal for standout listings & Airbnb.</p>
@@ -146,12 +59,13 @@
             <li>• 20–30 edited photos (int./ext.)</li>
             <li>• 8–12 aerial photos</li>
             <li>• 15–30s vertical video clip</li>
-            <li>• Next‑day preview</li>
+            <li>• Next-day preview</li>
           </ul>
-          <a href="#contact" class="mt-8 inline-block px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">Book Premium</a>
+          <button type="button" class="book-btn mt-8 inline-block px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700" data-package="Premium — $80,000">Book Premium</button>
         </div>
+
         <!-- Platinum -->
-        <div class="rounded-2xl border shadow p-8 reveal">
+        <div class="package-card rounded-2xl border shadow p-8 cursor-pointer" data-package="Platinum — $100,000">
           <h3 class="text-2xl font-bold">Platinum</h3>
           <p class="mt-2 text-gray-600">For luxury listings, events, and campaigns.</p>
           <p class="mt-6 text-4xl font-extrabold">$100,000</p>
@@ -159,88 +73,110 @@
             <li>• 35–50 edited photos (int./ext.)</li>
             <li>• 15–25 aerial photos</li>
             <li>• 60–90s highlight video</li>
-            <li>• On‑site styling & staging support</li>
+            <li>• On-site styling & staging support</li>
           </ul>
-          <a href="#contact" class="mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black">Book Platinum</a>
+          <button type="button" class="book-btn mt-8 inline-block px-5 py-3 bg-gray-900 text-white rounded-xl hover:bg-black" data-package="Platinum — $100,000">Book Platinum</button>
         </div>
-      </div>
-      <p class="text-center text-sm text-gray-500 mt-6">Need something custom? <a href="#contact" class="text-blue-700 underline">Contact us</a> for a tailored quote.</p>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="py-20 px-6 bg-gray-50">
-    <div class="max-w-5xl mx-auto reveal">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
-      <p class="text-gray-700 leading-relaxed">We specialize in drone photography and videography, capturing breathtaking aerial shots that highlight the unique features of every property. From real estate listings and Airbnb rentals to private estates and commercial spaces, we also create polished interior and exterior photography to showcase your space from every angle. Beyond imagery, our property revamping service adds modern styling and creative staging to elevate appeal and performance. Whether you’re marketing a home for sale, boosting Airbnb bookings, or promoting an event, our team brings your vision to life with professionalism, creativity, and excellence.</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-gradient-to-b from-white to-blue-50">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 reveal">Get in Touch</h2>
-      <div class="grid md:grid-cols-2 gap-6 items-start">
-        <form action="https://formsubmit.co/stephsdronerevampingservices@gmail.com" method="POST" onsubmit="handleSubmit(event)" class="bg-white rounded-2xl shadow p-6 md:p-8 reveal">
-          <!-- FormSubmit options -->
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="thank-you.html" />
-          <input type="hidden" name="_subject" value="New Booking Inquiry — Steph’s Drone & Revamping" />
+  <section id="contact" class="py-20 px-6 bg-gray-100">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
+      <form id="bookingForm" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
+        
+        <!-- Hidden package input -->
+        <input type="hidden" name="package" id="selectedPackage" value="Premium — $80,000">
+        <input type="hidden" name="_captcha" value="false">
 
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium mb-1">Name</label>
-              <input name="name" required class="w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Your name" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1">Email</label>
-              <input type="email" name="email" required class="w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="you@email.com" />
-            </div>
-          </div>
+        <div>
+          <label class="block font-medium">Name</label>
+          <input type="text" name="name" required class="w-full mt-2 p-3 border rounded-lg">
+        </div>
 
-          <div class="mt-4 grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium mb-1">Phone (optional)</label>
-              <input name="phone" class="w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="(xxx) xxx-xxxx" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1">Interested In</label>
-              <select name="service" class="w-full rounded-xl border p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <option>Drone Photo/Video</option>
-                <option>Interior Photography</option>
-                <option>Exterior Photography</option>
-                <option>Property Revamping</option>
-                <option>Custom Package</option>
-              </select>
-            </div>
-          </div>
+        <div>
+          <label class="block font-medium">Email</label>
+          <input type="email" name="email" required class="w-full mt-2 p-3 border rounded-lg">
+        </div>
 
-          <div class="mt-4">
-            <label class="block text-sm font-medium mb-1">Message</label>
-            <textarea name="message" required class="w-full rounded-xl border p-3 h-28 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tell us about your property or event…"></textarea>
-          </div>
+        <div>
+          <label class="block font-medium">Interested In</label>
+          <select name="interest" id="interest" required class="w-full mt-2 p-3 border rounded-lg">
+            <option value="">Select a package</option>
+            <option value="Basic — $50,000">Basic — $50,000</option>
+            <option value="Premium — $80,000" selected>Premium — $80,000</option>
+            <option value="Platinum — $100,000">Platinum — $100,000</option>
+          </select>
+        </div>
 
-          <button type="submit" class="mt-6 w-full bg-blue-600 text-white font-semibold rounded-xl py-3 hover:bg-blue-700">Book Here</button>
-          <p class="text-xs text-gray-500 mt-3">By submitting, you agree to be contacted about your inquiry.</p>
-        </form>
+        <div>
+          <label class="block font-medium">Message</label>
+          <textarea name="message" id="message" rows="4" class="w-full mt-2 p-3 border rounded-lg">I’m interested in the Premium — $80,000 package.</textarea>
+        </div>
 
-        <aside class="reveal bg-white rounded-2xl shadow p-6 md:p-8">
-          <h3 class="text-xl font-semibold">Contact Details</h3>
-          <p class="mt-2 text-gray-700">We usually reply within 24 hours.</p>
-          <div class="mt-4 space-y-2 text-gray-800">
-            <p>📧 Email: <a class="text-blue-700 underline" href="mailto:stephsdronerevampingservices@gmail.com">stephsdronerevampingservices@gmail.com</a></p>
-            <p>📸 Instagram: <a class="text-blue-700 underline" target="_blank" href="https://www.instagram.com/stephsdronerevampingservices?igsh=OW5yMnFnaGkzMmx4">@stephsdronerevampingservices</a></p>
-          </div>
-          <div class="mt-6 text-sm text-gray-600">
-            <p>Serving: Real estate agents, Airbnb hosts, homeowners, and event planners.</p>
-            <p class="mt-1">Available for sunrise/sunset shoots upon request.</p>
-          </div>
-        </aside>
+        <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">Send Booking</button>
+      </form>
+
+      <!-- Thank You Message -->
+      <div id="thankYou" class="hidden text-center bg-white shadow-lg rounded-2xl p-12">
+        <h3 class="text-2xl font-bold text-green-600">✅ Thank You!</h3>
+        <p class="mt-4">Your booking request has been sent successfully. We’ll get back to you soon!</p>
+        <a href="#pricing" class="mt-6 inline-block px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">Back to Packages</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-8 text-center bg-gray-900 text-gray-300">
-    <p>© <span id="y"></span> Steph’s Drone & Revamping Services. All rights reserved.</p>
-  </footer>
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const packageCards = document.querySelectorAll('.package-card');
+      const packageInput = document.querySelector('#selectedPackage');
+      const interestDropdown = document.querySelector('#interest');
+      const messageBox = document.querySelector('#message');
+      const bookButtons = document.querySelectorAll('.book-btn');
+      const form = document.querySelector('#bookingForm');
+      const thankYou = document.querySelector('#thankYou');
+
+      function selectPackage(selected) {
+        // highlight
+        packageCards.forEach(c => {
+          c.classList.remove('active');
+          if (c.dataset.package === selected) c.classList.add('active');
+        });
+
+        // set values
+        packageInput.value = selected;
+        interestDropdown.value = selected;
+        messageBox.value = `I’m interested in the ${selected} package.`;
+
+        // scroll to form
+        document.querySelector('#contact').scrollIntoView({behavior: "smooth"});
+      }
+
+      packageCards.forEach(card => {
+        card.addEventListener('click', () => selectPackage(card.dataset.package));
+      });
+
+      bookButtons.forEach(btn => {
+        btn.addEventListener('click', () => selectPackage(btn.dataset.package));
+      });
+
+      // Show thank you message after submission
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, { method: 'POST', body: data })
+          .then(() => {
+            form.classList.add('hidden');
+            thankYou.classList.remove('hidden');
+          })
+          .catch(err => alert("Something went wrong. Please try again."));
+      });
+    });
+  </script>
+
+</body>
+</html>
