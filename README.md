@@ -244,33 +244,3 @@
   <footer class="py-8 text-center bg-gray-900 text-gray-300">
     <p>© <span id="y"></span> Steph’s Drone & Revamping Services. All rights reserved.</p>
   </footer>
-
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
-<!-- ==========================
-  FILE: thank-you.html
-  Simple confirmation page shown after successful form submission
-========================== -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You — Steph’s Drone & Revamping</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .hero-bg { background-image: url('https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; }
-    .float { animation: float 3s ease-in-out infinite; filter: drop-shadow(0 8px 24px rgba(0,0,0,.35)); }
-    @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
-  </style>
-</head>
-<body class="hero-bg min-h-screen grid place-items-center">
-  <main class="glass max-w-lg mx-auto p-10 rounded-3xl text-center shadow-2xl">
-    <img class="w-14 h-14 mx-auto float" alt="Drone" src="https://cdn-icons-png.flaticon.com/512/149/149852.png"/>
-    <h1 class="text-3xl font-extrabold mt-4">Thank You!</h1>
-    <p class="mt-3 text-gray-700">Your message was sent. We’ll get back to you shortly.</p>
-    <a href="index.html" class="mt-6 inline-block px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Back to Home</a>
-  </main>
-</body>
-</html>
