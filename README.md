@@ -6,21 +6,59 @@
   <title>Steph’s Drone & Revamping Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html { scroll-behavior: smooth; }
     .active-package {
       border: 2px solid #2563eb;
-      box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }
+    .package-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .package-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      border-color: #2563eb;
+    }
+    .portfolio-img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body class="font-sans text-gray-900">
 
-  <!-- Hero -->
-  <section class="relative bg-gray-900 text-white py-24 px-6 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold">Steph’s Drone & Revamping Services</h1>
-    <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-      Capturing stunning aerial views, professional photography, and creative revamping for your property or event.
-    </p>
-    <a href="#pricing" class="mt-8 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-lg font-medium">View Packages</a>
+  <!-- Navigation -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-600">Steph’s Drone</div>
+      <nav class="space-x-6">
+        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+        <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium">Portfolio</a>
+        <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Packages</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Welcome Section -->
+  <section class="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-28 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Steph’s Drone & Revamping Services</h1>
+      <p class="mt-4 text-lg md:text-2xl text-gray-100 leading-relaxed">
+        Your dedicated team for breathtaking aerial photography, professional property revamps, and creative visual storytelling.  
+        We capture the essence of every space and event, making your listings and memories truly unforgettable.
+      </p>
+      <a href="#pricing" class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:bg-gray-100 transition-all duration-300">
+        Explore Our Packages
+      </a>
+    </div>
+    <div class="absolute inset-0 overflow-hidden -z-10">
+      <div class="absolute w-96 h-96 bg-indigo-500 opacity-20 rounded-full top-10 left-10 animate-pulse-slow"></div>
+      <div class="absolute w-72 h-72 bg-purple-500 opacity-15 rounded-full bottom-0 right-16 animate-pulse-slow"></div>
+    </div>
   </section>
 
   <!-- About -->
@@ -38,9 +76,9 @@
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Jamaican house aerial">
-        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Luxury villa Jamaica">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow" alt="Landscape Jamaica">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Jamaican house aerial">
+        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Luxury villa Jamaica">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
       </div>
     </div>
   </section>
@@ -162,7 +200,6 @@
           <textarea name="message" rows="4" class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500"></textarea>
         </div>
 
-        <!-- Hidden input to send selected package -->
         <input type="hidden" name="package" id="selectedPackage" value="Premium — $80,000">
 
         <button type="submit" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium">Send Message</button>
