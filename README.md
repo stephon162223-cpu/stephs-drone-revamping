@@ -78,7 +78,7 @@
       </a>
     </div>
     <div class="absolute inset-0 -z-10">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Drone aerial view" class="w-full h-full object-cover opacity-30">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?auto=format&fit=crop&w=1600&q=80" alt="Drone aerial view" class="w-full h-full object-cover opacity-30">
       <div class="absolute w-96 h-96 bg-indigo-500 opacity-20 rounded-full top-10 left-10 animate-pulse-slow"></div>
       <div class="absolute w-72 h-72 bg-purple-500 opacity-15 rounded-full bottom-0 right-16 animate-pulse-slow"></div>
     </div>
@@ -99,12 +99,12 @@
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Luxury villa Jamaica">
-        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Drone aerial property Jamaica">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
-        <img src="https://images.unsplash.com/photo-1560185127-6fcb9f5bdebe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Interior design revamp">
-        <img src="https://images.unsplash.com/photo-1580584124513-cb417a5b0a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Event drone coverage">
-        <img src="https://images.unsplash.com/photo-1601072269355-bbc7c650c2f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" class="rounded-xl shadow portfolio-img" alt="Commercial property">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Luxury villa Jamaica">
+        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Drone aerial property Jamaica">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
+        <img src="https://images.unsplash.com/photo-1560185127-6fcb9f5bdebe?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Interior design revamp">
+        <img src="https://images.unsplash.com/photo-1580584124513-cb417a5b0a43?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Event drone coverage">
+        <img src="https://images.unsplash.com/photo-1601072269355-bbc7c650c2f7?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Commercial property">
       </div>
     </div>
   </section>
