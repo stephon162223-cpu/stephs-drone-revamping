@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SDRS</title>
+  <title>S D R S</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -48,7 +48,7 @@
   <!-- Navigation -->
   <header class="sticky top-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-blue-600">SDRS</div>
+      <div class="text-2xl font-bold text-blue-600">S D R S</div>
       <nav class="space-x-6">
         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
         <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Packages</a>
