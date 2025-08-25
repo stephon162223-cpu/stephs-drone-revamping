@@ -87,7 +87,7 @@ Whether you’re selling a home, boosting your Airbnb bookings, or showcasing a 
 Why choose us?
 Highlight your property’s best features with stunning visuals.
 Make listings irresistible to potential buyers or renters.
-Enjoy a stress-free, professional service from start to finish.
+Enjoy a stress free, professional service from start to finish.
 Don’t just list your property—make it unforgettable. Book your package today and let us turn your space into a visual masterpiece that sells.
       </p>
     </div>
