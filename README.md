@@ -24,13 +24,6 @@
       border-color: #2563eb;
     }
 
-    /* Portfolio hover */
-    .portfolio-img:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-
     /* Buttons hover */
     .btn-hover {
       transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -58,7 +51,6 @@
       <div class="text-2xl font-bold text-blue-600">Steph’s Drone</div>
       <nav class="space-x-6">
         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
-        <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium">Portfolio</a>
         <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Packages</a>
         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
       </nav>
@@ -91,21 +83,6 @@
       <p class="text-lg text-gray-700 leading-relaxed">
         We specialize in drone photography and videography, capturing breathtaking aerial shots that highlight the unique features of every property. From real estate listings and Airbnb rentals to private estates and commercial spaces, we also create polished interior and exterior photography to showcase your space from every angle. Beyond imagery, our property revamping service adds modern styling and creative staging to elevate appeal and performance. Whether you’re marketing a home for sale, boosting Airbnb bookings, or promoting an event, our team brings your vision to life with professionalism, creativity, and excellence.
       </p>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="py-20 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12">Portfolio</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Luxury villa Jamaica">
-        <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Drone aerial property Jamaica">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Landscape Jamaica">
-        <img src="https://images.unsplash.com/photo-1560185127-6fcb9f5bdebe?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Interior design revamp">
-        <img src="https://images.unsplash.com/photo-1580584124513-cb417a5b0a43?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Event drone coverage">
-        <img src="https://images.unsplash.com/photo-1601072269355-bbc7c650c2f7?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow portfolio-img" alt="Commercial property">
-      </div>
     </div>
   </section>
 
