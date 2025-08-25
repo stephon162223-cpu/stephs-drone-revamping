@@ -48,7 +48,7 @@
   <!-- Navigation -->
   <header class="sticky top-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-blue-600">Steph’s Drone</div>
+      <div class="text-2xl font-bold text-blue-600">SDRS</div>
       <nav class="space-x-6">
         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
         <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Packages</a>
