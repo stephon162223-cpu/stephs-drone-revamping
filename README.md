@@ -81,7 +81,14 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
-        We specialize in drone photography and videography, capturing breathtaking aerial shots that highlight the unique features of every property. From real estate listings and Airbnb rentals to private estates and commercial spaces, we also create polished interior and exterior photography to showcase your space from every angle. Beyond imagery, our property revamping service adds modern styling and creative staging to elevate appeal and performance. Whether you’re marketing a home for sale, boosting Airbnb bookings, or promoting an event, our team brings your vision to life with professionalism, creativity, and excellence.
+        Turn Your Property into a Showstopper with Steph’s Drone & Revamping Services
+At Steph’s Drone & Revamping Services, we don’t just take photos—we create experiences that make your property unforgettable. Our expert team combines breathtaking drone aerial shots, polished interior and exterior photography, and professional property styling to ensure your listings capture attention, attract buyers or renters, and stand out in any market.
+Whether you’re selling a home, boosting your Airbnb bookings, or showcasing a commercial space, we bring creativity, precision, and professionalism to every project. From the first click to the final image, we handle everything seamlessly, making the process fast, stress-free, and impactful.
+Why choose us?
+Highlight your property’s best features with stunning visuals.
+Make listings irresistible to potential buyers or renters.
+Enjoy a stress-free, professional service from start to finish.
+Don’t just list your property—make it unforgettable. Book your package today and let us turn your space into a visual masterpiece that sells.
       </p>
     </div>
   </section>
