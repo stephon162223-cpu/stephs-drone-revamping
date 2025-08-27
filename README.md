@@ -77,10 +77,10 @@
   </section>
 
   <!-- Promo Video Section -->
-  <section class="py-20 px-6 bg-gray-100 text-center">
+  <section id="promo-video" class="py-20 px-6 bg-gray-100 text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-8">Watch Our Work</h2>
     <div class="max-w-4xl mx-auto">
-      <video class="w-full rounded-2xl shadow-lg" autoplay muted loop playsinline>
+      <video id="promoVideo" class="w-full rounded-2xl shadow-lg" autoplay muted loop playsinline>
         <source src="promo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -220,6 +220,7 @@
     const packageCards = document.querySelectorAll(".package-card");
     const packageInput = document.querySelector("#selectedPackage");
     const interestDropdown = document.querySelector("#interest");
+    const promoVideoSection = document.querySelector("#promo-video");
 
     packageCards.forEach(card => {
       card.addEventListener("click", () => {
@@ -239,7 +240,8 @@
         packageCards.forEach(c => {
           c.classList.toggle("active-package", c.dataset.package === selected);
         });
-        document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+        // Scroll to promo video first
+        promoVideoSection.scrollIntoView({ behavior: "smooth" });
       });
     });
   </script>
