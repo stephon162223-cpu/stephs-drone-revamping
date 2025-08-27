@@ -33,45 +33,9 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
-    /* Hero blobs */
-    .animate-pulse-slow {
-      animation: pulse 6s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%,100% { transform: scale(1); opacity: 0.2; }
-      50% { transform: scale(1.2); opacity: 0.3; }
-    }
-
-    /* Promo video effect */
-    #promo {
-      position: relative;
-      overflow: hidden;
-      height: 500px;
-    }
-    .promo-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .promo-slide.active {
-      opacity: 1;
-    }
-    .promo-overlay {
-      position: absolute;
-      top: 0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-    }
-    .promo-content {
-      position: relative;
-      z-index: 10;
+    /* Video overlay text */
+    .video-overlay {
+      background: rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
@@ -89,47 +53,19 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-28 px-6 text-center overflow-hidden">
-    <div class="max-w-4xl mx-auto relative z-10">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Steph’s Drone & Revamping Services</h1>
-      <p class="mt-4 text-lg md:text-2xl text-gray-100 leading-relaxed">
-        Your dedicated team for breathtaking aerial photography, professional property revamps, and creative visual storytelling.  
-        We capture the essence of every space and event, making your listings and memories truly unforgettable.
-      </p>
-      <a href="#pricing" class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg btn-hover hover:bg-gray-100">
-        Explore Our Packages
-      </a>
-    </div>
-    <div class="absolute inset-0 -z-10">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?auto=format&fit=crop&w=1600&q=80" alt="Drone aerial view" class="w-full h-full object-cover opacity-30">
-      <div class="absolute w-96 h-96 bg-indigo-500 opacity-20 rounded-full top-10 left-10 animate-pulse-slow"></div>
-      <div class="absolute w-72 h-72 bg-purple-500 opacity-15 rounded-full bottom-0 right-16 animate-pulse-slow"></div>
-    </div>
-  </section>
-
-  <!-- Promo Video-Like Section -->
-  <section id="promo">
-    <!-- Slides -->
-    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80" class="promo-slide active" alt="Jamaican property 1">
-    <img src="https://images.unsplash.com/photo-1505691723518-41cb3c27f8aa?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 2">
-    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 3">
-    
-    <!-- Overlay -->
-    <div class="promo-overlay"></div>
-    
-    <!-- Content -->
-    <div class="promo-content flex flex-col items-center justify-center text-center text-white h-full px-6">
-      <img src="https://YOUR_LOGO_URL_HERE.png" alt="SDRS Logo" class="w-48 mb-4">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Experience Your Property Like Never Before</h2>
-      <p class="text-lg md:text-2xl mb-6">
-        Stunning aerial shots, polished interiors, and professional property styling.<br>
-        Showcase your Jamaican property and attract buyers or renters instantly.
-      </p>
-      <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg btn-hover">
-        Book Your Package Today
-      </a>
-      <div class="mt-6 text-gray-200 text-sm md:text-base">
+  <!-- Promo Video Section -->
+  <section id="promo" class="relative w-full h-[500px] overflow-hidden">
+    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+      <source src="https://YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 video-overlay"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+      <img src="https://YOUR_LOGO_URL_HERE.png" alt="SDRS Logo" class="w-36 mb-4">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-2">Experience Your Property Like Never Before</h2>
+      <p class="text-lg md:text-2xl mb-4">Drone Photography • Interior Styling • Airbnb Boost • Luxury Showcases</p>
+      <a href="#contact" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold btn-hover">Book Your Package Today</a>
+      <div class="mt-4 text-sm md:text-base">
         📧 <a href="mailto:Stephsdronerevampingservices@gmail.com" class="underline hover:text-white">Stephsdronerevampingservices@gmail.com</a><br>
         📸 Instagram: <a href="https://instagram.com/Stephsdronerevampingservices" class="underline hover:text-white">@Stephsdronerevampingservices</a>
       </div>
@@ -141,7 +77,14 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
-        Turn Your Property into a Showstopper with Steph’s Drone & Revamping Services...
+        Turn Your Property into a Showstopper with Steph’s Drone & Revamping Services
+At Steph’s Drone & Revamping Services, we don’t just take photos we create experiences that make your property unforgettable. Our expert team combines breathtaking drone aerial shots, polished interior and exterior photography, and professional property styling to ensure your listings capture attention, attract buyers or renters, and stand out in any market.
+Whether you’re selling a home, boosting your Airbnb bookings, or showcasing a commercial space, we bring creativity, precision, and professionalism to every project. From the first click to the final image, we handle everything seamlessly, making the process fast, stress free, and impactful.
+Why choose us?
+Highlight your property’s best features with stunning visuals.
+Make listings irresistible to potential buyers or renters.
+Enjoy a stress free, professional service from start to finish.
+Don’t just list your property make it unforgettable. Book your package today and let us turn your space into a visual masterpiece that sells.
       </p>
     </div>
   </section>
@@ -151,7 +94,9 @@
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Package cards unchanged -->
+        <!-- Packages as in your original HTML -->
+        <!-- Basic, Premium, Platinum, Event Package, Custom Quote -->
+        <!-- [KEEP ALL PACKAGE CARDS AS IN YOUR ORIGINAL HTML] -->
       </div>
     </div>
   </section>
@@ -161,22 +106,39 @@
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
       <form action="https://formsubmit.co/stephsdronerevampingservices@gmail.com" method="POST" class="space-y-6 bg-gray-50 p-8 rounded-2xl shadow">
-        <!-- Contact form unchanged -->
+        <div>
+          <label class="block text-sm font-medium">Name</label>
+          <input type="text" name="name" required class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input type="email" name="email" required class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Phone</label>
+          <input type="text" name="phone" class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Interested In</label>
+          <select id="interest" name="interest" class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500">
+            <option value="Basic — $50,000">Basic — $50,000</option>
+            <option value="Premium — $80,000" selected>Premium — $80,000</option>
+            <option value="Platinum — $100,000">Platinum — $100,000</option>
+            <option value="Event Package — $120,000">Event Package — $120,000</option>
+            <option value="Custom Quote">Custom Quote</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Message</label>
+          <textarea name="message" rows="4" class="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <input type="hidden" name="package" id="selectedPackage" value="Premium — $80,000">
+        <button type="submit" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium btn-hover">Send Message</button>
       </form>
     </div>
   </section>
 
   <script>
-    // Promo slide rotation
-    const slides = document.querySelectorAll('.promo-slide');
-    let currentSlide = 0;
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 5000); // Change slide every 5 seconds
-
-    // Package selection script
     const packageCards = document.querySelectorAll(".package-card");
     const packageInput = document.querySelector("#selectedPackage");
     const interestDropdown = document.querySelector("#interest");
