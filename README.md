@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -76,26 +76,19 @@
     </div>
   </section>
 
-  <!-- Promo Video Section -->
-  <section id="promo-video" class="py-20 px-6 bg-gray-100 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-8">Watch Our Work</h2>
-    <div class="max-w-4xl mx-auto">
-      <video id="promoVideo" class="w-full rounded-2xl shadow-lg" autoplay muted loop playsinline>
-        <source src="https://cdn.pixabay.com/vimeo/480242686/Drone-Fly-Over-360p.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="mt-4 text-gray-700">See our drone and property revamping services in action!</p>
-    </div>
-  </section>
-
   <!-- About -->
   <section id="about" class="py-20 px-6 bg-white">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
-        Turn Your Property into a Showstopper with Steph’s Drone & Revamping Services. 
-        At Steph’s Drone & Revamping Services, we don’t just take photos — we create experiences that make your property unforgettable. Our expert team combines breathtaking drone aerial shots, polished interior and exterior photography, and professional property styling to ensure your listings capture attention, attract buyers or renters, and stand out in any market.
-        Whether you’re selling a home, boosting your Airbnb bookings, or showcasing a commercial space, we bring creativity, precision, and professionalism to every project. From the first click to the final image, we handle everything seamlessly, making the process fast, stress-free, and impactful.
+        Turn Your Property into a Showstopper with Steph’s Drone & Revamping Services
+At Steph’s Drone & Revamping Services, we don’t just take photos we create experiences that make your property unforgettable. Our expert team combines breathtaking drone aerial shots, polished interior and exterior photography, and professional property styling to ensure your listings capture attention, attract buyers or renters, and stand out in any market.
+Whether you’re selling a home, boosting your Airbnb bookings, or showcasing a commercial space, we bring creativity, precision, and professionalism to every project. From the first click to the final image, we handle everything seamlessly, making the process fast, stress free, and impactful.
+Why choose us?
+Highlight your property’s best features with stunning visuals.
+Make listings irresistible to potential buyers or renters.
+Enjoy a stress free, professional service from start to finish.
+Don’t just list your property make it unforgettable. Book your package today and let us turn your space into a visual masterpiece that sells.
       </p>
     </div>
   </section>
@@ -107,7 +100,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         <!-- Basic -->
-        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Basic — $50,000" data-video="https://cdn.pixabay.com/vimeo/480242686/Drone-Fly-Over-360p.mp4">
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Basic — $50,000">
           <h3 class="text-2xl font-bold">Basic</h3>
           <p class="mt-2 text-gray-600">Perfect for quick listings and small spaces.</p>
           <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$50,000</p>
@@ -117,11 +110,11 @@
             <li>• Basic color correction</li>
             <li>• 3–5 day delivery</li>
           </ul>
-          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Basic — $50,000" data-video="https://cdn.pixabay.com/vimeo/480242686/Drone-Fly-Over-360p.mp4">Book Basic</button>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Basic — $50,000">Book Basic</button>
         </div>
 
         <!-- Premium -->
-        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer active-package" data-package="Premium — $80,000" data-video="https://cdn.pixabay.com/vimeo/545333829/Drone-Panorama-360p.mp4">
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer active-package" data-package="Premium — $80,000">
           <div class="inline-block px-2 py-1 text-xs bg-blue-600 text-white rounded-full">Most Popular</div>
           <h3 class="text-2xl font-bold mt-2">Premium</h3>
           <p class="mt-1 text-gray-600">Ideal for standout listings & Airbnb.</p>
@@ -132,11 +125,11 @@
             <li>• 15–30s vertical video clip</li>
             <li>• Next-day preview</li>
           </ul>
-          <button type="button" class="book-btn mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 text-sm btn-hover" data-package="Premium — $80,000" data-video="https://cdn.pixabay.com/vimeo/545333829/Drone-Panorama-360p.mp4">Book Premium</button>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 text-sm btn-hover" data-package="Premium — $80,000">Book Premium</button>
         </div>
 
         <!-- Platinum -->
-        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Platinum — $100,000" data-video="https://cdn.pixabay.com/vimeo/541784352/Drone-Over-Mountain-360p.mp4">
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Platinum — $100,000">
           <h3 class="text-2xl font-bold">Platinum</h3>
           <p class="mt-2 text-gray-600">For luxury listings, events, and campaigns.</p>
           <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$100,000</p>
@@ -146,11 +139,11 @@
             <li>• 60–90s highlight video</li>
             <li>• On-site styling & staging support</li>
           </ul>
-          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Platinum — $100,000" data-video="https://cdn.pixabay.com/vimeo/541784352/Drone-Over-Mountain-360p.mp4">Book Platinum</button>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Platinum — $100,000">Book Platinum</button>
         </div>
 
-        <!-- Event -->
-        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Event Package — $120,000" data-video="https://cdn.pixabay.com/vimeo/494522351/Drone-Cityscape-360p.mp4">
+        <!-- Event Package -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Event Package — $120,000">
           <h3 class="text-2xl font-bold">Event Package</h3>
           <p class="mt-2 text-gray-600">Perfect for weddings, parties & special events.</p>
           <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$120,000</p>
@@ -160,11 +153,11 @@
             <li>• Highlight video included</li>
             <li>• 7–10 day delivery</li>
           </ul>
-          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Event Package — $120,000" data-video="https://cdn.pixabay.com/vimeo/494522351/Drone-Cityscape-360p.mp4">Book Event Package</button>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Event Package — $120,000">Book Event Package</button>
         </div>
 
-        <!-- Custom -->
-        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Custom Quote" data-video="https://cdn.pixabay.com/vimeo/481887142/Drone-Forest-360p.mp4">
+        <!-- Custom Quote -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Custom Quote">
           <h3 class="text-2xl font-bold">Custom Quote</h3>
           <p class="mt-2 text-gray-600">Don’t see a package that fits? Get a personalized quote.</p>
           <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">—</p>
@@ -173,7 +166,7 @@
             <li>• Flexible services</li>
             <li>• Custom pricing</li>
           </ul>
-          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-600 text-white rounded-xl hover:bg-gray-700 text-sm btn-hover" data-package="Custom Quote" data-video="https://cdn.pixabay.com/vimeo/481887142/Drone-Forest-360p.mp4">Request Quote</button>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-600 text-white rounded-xl hover:bg-gray-700 text-sm btn-hover" data-package="Custom Quote">Request Quote</button>
         </div>
 
       </div>
@@ -221,43 +214,25 @@
     const packageCards = document.querySelectorAll(".package-card");
     const packageInput = document.querySelector("#selectedPackage");
     const interestDropdown = document.querySelector("#interest");
-    const promoVideo = document.querySelector("#promoVideo");
 
     packageCards.forEach(card => {
       card.addEventListener("click", () => {
         packageCards.forEach(c => c.classList.remove("active-package"));
         card.classList.add("active-package");
-
         const selected = card.dataset.package;
-        const videoSrc = card.dataset.video;
-
         packageInput.value = selected;
         interestDropdown.value = selected;
-
-        if(videoSrc){
-          promoVideo.src = videoSrc;
-          promoVideo.load();
-          promoVideo.play();
-        }
       });
     });
 
     document.querySelectorAll(".book-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const selected = btn.dataset.package;
-        const videoSrc = btn.dataset.video;
-
         packageInput.value = selected;
         interestDropdown.value = selected;
-
-        packageCards.forEach(c => c.classList.toggle("active-package", c.dataset.package === selected));
-
-        if(videoSrc){
-          promoVideo.src = videoSrc;
-          promoVideo.load();
-          promoVideo.play();
-        }
-
+        packageCards.forEach(c => {
+          c.classList.toggle("active-package", c.dataset.package === selected);
+        });
         document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
       });
     });
