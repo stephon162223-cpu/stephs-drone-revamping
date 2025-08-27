@@ -42,7 +42,7 @@
       50% { transform: scale(1.2); opacity: 0.3; }
     }
 
-    /* Promo cinematic video section */
+    /* Promo video effect */
     #promo {
       position: relative;
       overflow: hidden;
@@ -56,12 +56,10 @@
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      transform: scale(1);
-      transition: opacity 1.5s ease-in-out, transform 20s ease-in-out;
+      transition: opacity 1s ease-in-out;
     }
     .promo-slide.active {
       opacity: 1;
-      transform: scale(1.1);
     }
     .promo-overlay {
       position: absolute;
@@ -74,42 +72,6 @@
     .promo-content {
       position: relative;
       z-index: 10;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      text-align: center;
-      padding: 0 1.5rem;
-      color: #fff;
-    }
-    .promo-content img {
-      width: 150px;
-      margin-bottom: 1rem;
-    }
-    .promo-caption {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    .promo-caption.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .promo-content h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    .promo-content h2.active {
-      opacity: 1;
-      transform: translateY(0);
     }
   </style>
 </head>
@@ -146,23 +108,28 @@
     </div>
   </section>
 
-  <!-- Promo cinematic section -->
+  <!-- Promo Video-Like Section -->
   <section id="promo">
-    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80" class="promo-slide active" alt="Jamaican property 1" data-caption="Drone Photography">
-    <img src="https://images.unsplash.com/photo-1505691723518-41cb3c27f8aa?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 2" data-caption="Interior & Exterior Styling">
-    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 3" data-caption="Boost Airbnb Bookings">
-    <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 4" data-caption="Luxury Property Showcases">
+    <!-- Slides -->
+    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80" class="promo-slide active" alt="Jamaican property 1">
+    <img src="https://images.unsplash.com/photo-1505691723518-41cb3c27f8aa?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 2">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" class="promo-slide" alt="Jamaican property 3">
     
+    <!-- Overlay -->
     <div class="promo-overlay"></div>
-
-    <div class="promo-content">
-      <img src="https://YOUR_LOGO_URL_HERE.png" alt="SDRS Logo">
-      <h2 class="active">Experience Your Property Like Never Before</h2>
-      <div class="promo-caption active">Drone Photography</div>
-      <a href="#contact" class="mt-4 inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg btn-hover">
+    
+    <!-- Content -->
+    <div class="promo-content flex flex-col items-center justify-center text-center text-white h-full px-6">
+      <img src="https://YOUR_LOGO_URL_HERE.png" alt="SDRS Logo" class="w-48 mb-4">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Experience Your Property Like Never Before</h2>
+      <p class="text-lg md:text-2xl mb-6">
+        Stunning aerial shots, polished interiors, and professional property styling.<br>
+        Showcase your Jamaican property and attract buyers or renters instantly.
+      </p>
+      <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg btn-hover">
         Book Your Package Today
       </a>
-      <div class="mt-4 text-gray-200 text-sm md:text-base">
+      <div class="mt-6 text-gray-200 text-sm md:text-base">
         📧 <a href="mailto:Stephsdronerevampingservices@gmail.com" class="underline hover:text-white">Stephsdronerevampingservices@gmail.com</a><br>
         📸 Instagram: <a href="https://instagram.com/Stephsdronerevampingservices" class="underline hover:text-white">@Stephsdronerevampingservices</a>
       </div>
@@ -179,27 +146,35 @@
     </div>
   </section>
 
-  <!-- Packages and Contact remain unchanged -->
+  <!-- Packages -->
+  <section id="pricing" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Package cards unchanged -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
+      <form action="https://formsubmit.co/stephsdronerevampingservices@gmail.com" method="POST" class="space-y-6 bg-gray-50 p-8 rounded-2xl shadow">
+        <!-- Contact form unchanged -->
+      </form>
+    </div>
+  </section>
 
   <script>
-    // Promo cinematic slides with captions
+    // Promo slide rotation
     const slides = document.querySelectorAll('.promo-slide');
-    const caption = document.querySelector('.promo-caption');
-    const title = document.querySelector('.promo-content h2');
     let currentSlide = 0;
     setInterval(() => {
       slides[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
-      // update caption
-      caption.classList.remove('active');
-      title.classList.remove('active');
-      setTimeout(() => {
-        caption.textContent = slides[currentSlide].dataset.caption;
-        caption.classList.add('active');
-        title.classList.add('active');
-      }, 500);
-    }, 7000); // 7 seconds per slide
+    }, 5000); // Change slide every 5 seconds
 
     // Package selection script
     const packageCards = document.querySelectorAll(".package-card");
