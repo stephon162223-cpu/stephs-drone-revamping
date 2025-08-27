@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,9 +33,13 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
-    /* Video overlay text */
-    .video-overlay {
-      background: rgba(0, 0, 0, 0.3);
+    /* Hero blobs */
+    .animate-pulse-slow {
+      animation: pulse 6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity: 0.2; }
+      50% { transform: scale(1.2); opacity: 0.3; }
     }
   </style>
 </head>
@@ -53,22 +57,22 @@
     </div>
   </header>
 
-  <!-- Promo Video Section -->
-  <section id="promo" class="relative w-full h-[500px] overflow-hidden">
-    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-      <source src="https://YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="absolute inset-0 video-overlay"></div>
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
-      <img src="https://YOUR_LOGO_URL_HERE.png" alt="SDRS Logo" class="w-36 mb-4">
-      <h2 class="text-3xl md:text-5xl font-extrabold mb-2">Experience Your Property Like Never Before</h2>
-      <p class="text-lg md:text-2xl mb-4">Drone Photography • Interior Styling • Airbnb Boost • Luxury Showcases</p>
-      <a href="#contact" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold btn-hover">Book Your Package Today</a>
-      <div class="mt-4 text-sm md:text-base">
-        📧 <a href="mailto:Stephsdronerevampingservices@gmail.com" class="underline hover:text-white">Stephsdronerevampingservices@gmail.com</a><br>
-        📸 Instagram: <a href="https://instagram.com/Stephsdronerevampingservices" class="underline hover:text-white">@Stephsdronerevampingservices</a>
-      </div>
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-28 px-6 text-center overflow-hidden">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Steph’s Drone & Revamping Services</h1>
+      <p class="mt-4 text-lg md:text-2xl text-gray-100 leading-relaxed">
+        Your dedicated team for breathtaking aerial photography, professional property revamps, and creative visual storytelling.  
+        We capture the essence of every space and event, making your listings and memories truly unforgettable.
+      </p>
+      <a href="#pricing" class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg btn-hover hover:bg-gray-100">
+        Explore Our Packages
+      </a>
+    </div>
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161f1b54d?auto=format&fit=crop&w=1600&q=80" alt="Drone aerial view" class="w-full h-full object-cover opacity-30">
+      <div class="absolute w-96 h-96 bg-indigo-500 opacity-20 rounded-full top-10 left-10 animate-pulse-slow"></div>
+      <div class="absolute w-72 h-72 bg-purple-500 opacity-15 rounded-full bottom-0 right-16 animate-pulse-slow"></div>
     </div>
   </section>
 
@@ -94,9 +98,77 @@ Don’t just list your property make it unforgettable. Book your package today a
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Packages as in your original HTML -->
-        <!-- Basic, Premium, Platinum, Event Package, Custom Quote -->
-        <!-- [KEEP ALL PACKAGE CARDS AS IN YOUR ORIGINAL HTML] -->
+
+        <!-- Basic -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Basic — $50,000">
+          <h3 class="text-2xl font-bold">Basic</h3>
+          <p class="mt-2 text-gray-600">Perfect for quick listings and small spaces.</p>
+          <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$50,000</p>
+          <ul class="mt-4 space-y-2 text-gray-700 flex-1 text-sm">
+            <li>• 10–15 edited photos (int./ext.)</li>
+            <li>• 3–5 aerial photos</li>
+            <li>• Basic color correction</li>
+            <li>• 3–5 day delivery</li>
+          </ul>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Basic — $50,000">Book Basic</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer active-package" data-package="Premium — $80,000">
+          <div class="inline-block px-2 py-1 text-xs bg-blue-600 text-white rounded-full">Most Popular</div>
+          <h3 class="text-2xl font-bold mt-2">Premium</h3>
+          <p class="mt-1 text-gray-600">Ideal for standout listings & Airbnb.</p>
+          <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$80,000</p>
+          <ul class="mt-4 space-y-2 text-gray-700 flex-1 text-sm">
+            <li>• 20–30 edited photos (int./ext.)</li>
+            <li>• 8–12 aerial photos</li>
+            <li>• 15–30s vertical video clip</li>
+            <li>• Next-day preview</li>
+          </ul>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 text-sm btn-hover" data-package="Premium — $80,000">Book Premium</button>
+        </div>
+
+        <!-- Platinum -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Platinum — $100,000">
+          <h3 class="text-2xl font-bold">Platinum</h3>
+          <p class="mt-2 text-gray-600">For luxury listings, events, and campaigns.</p>
+          <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$100,000</p>
+          <ul class="mt-4 space-y-2 text-gray-700 flex-1 text-sm">
+            <li>• 35–50 edited photos (int./ext.)</li>
+            <li>• 15–25 aerial photos</li>
+            <li>• 60–90s highlight video</li>
+            <li>• On-site styling & staging support</li>
+          </ul>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Platinum — $100,000">Book Platinum</button>
+        </div>
+
+        <!-- Event Package -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Event Package — $120,000">
+          <h3 class="text-2xl font-bold">Event Package</h3>
+          <p class="mt-2 text-gray-600">Perfect for weddings, parties & special events.</p>
+          <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">$120,000</p>
+          <ul class="mt-4 space-y-2 text-gray-700 flex-1 text-sm">
+            <li>• Full drone coverage of event</li>
+            <li>• Professional ground photography</li>
+            <li>• Highlight video included</li>
+            <li>• 7–10 day delivery</li>
+          </ul>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-black text-sm btn-hover" data-package="Event Package — $120,000">Book Event Package</button>
+        </div>
+
+        <!-- Custom Quote -->
+        <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Custom Quote">
+          <h3 class="text-2xl font-bold">Custom Quote</h3>
+          <p class="mt-2 text-gray-600">Don’t see a package that fits? Get a personalized quote.</p>
+          <p class="mt-4 text-2xl md:text-3xl font-bold text-blue-600">—</p>
+          <ul class="mt-4 space-y-2 text-gray-700 flex-1 text-sm">
+            <li>• Tailored to your needs</li>
+            <li>• Flexible services</li>
+            <li>• Custom pricing</li>
+          </ul>
+          <button type="button" class="book-btn mt-4 px-4 py-2 bg-gray-600 text-white rounded-xl hover:bg-gray-700 text-sm btn-hover" data-package="Custom Quote">Request Quote</button>
+        </div>
+
       </div>
     </div>
   </section>
