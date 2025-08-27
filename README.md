@@ -76,6 +76,18 @@
     </div>
   </section>
 
+  <!-- Promo Video Section -->
+  <section class="py-20 px-6 bg-gray-100 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">Watch Our Work</h2>
+    <div class="max-w-4xl mx-auto">
+      <video class="w-full rounded-2xl shadow-lg" autoplay muted loop playsinline>
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="mt-4 text-gray-700">See our drone and property revamping services in action!</p>
+    </div>
+  </section>
+
   <!-- About -->
   <section id="about" class="py-20 px-6 bg-white">
     <div class="max-w-5xl mx-auto text-center">
@@ -93,7 +105,6 @@
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Packages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
         <!-- Basic -->
         <div class="package-card rounded-2xl border shadow p-6 flex flex-col cursor-pointer" data-package="Basic — $50,000">
           <h3 class="text-2xl font-bold">Basic</h3>
